@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <div class="row m-t-5" id="form_id">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <h1>Search cheapest and fastest path with Dijkstra's algorithm</h1>
+                    <div class="form-group">
+                        <select class="form-control m-t-1" id="first_city">
+
+                        </select>
+                        <select class="form-control m-t-1" id="end_city">
+
+                        </select>
+                        <div class="m-t-1">
+                            <button type="button" class="btn btn-info" id="cost_button">Cheapest</button>
+                            <button type="button" class="btn" id="time_button">Fastest</button>
+                        </div>
+                        <div class="m-t-1">
+                            <button type="button" class="btn btn-success" id="submit">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+            <div class="row m-t-5" id="restore_id">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <div id="result" class="m-t-1"></div>
+                    <div class="m-t-1">
+                        <button type="button" class="btn btn-success" id="restore">Restore</button>
+                    </div>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/style.css') }}"/>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('assets/vendor/underscore/underscore-min.js') }}"></script>
+    <script src="{{ asset('bundles/app/js/js.js') }}"></script>
+{% endblock %}
